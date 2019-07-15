@@ -24,7 +24,7 @@ steps:
   inputs:
     command: 'build'
     projects: '**/$(projectName).csproj'
-    arguments: '-c $(buildConfiguration) -v n'
+    arguments: '-c $(buildConfiguration)'
 
 - task: CopyFiles@2
   inputs:
