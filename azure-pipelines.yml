@@ -11,6 +11,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  projectName: Razor.SweetAlert2.Guide.Server
 
 steps:
 - task: DotNetCoreInstaller@0
@@ -22,12 +23,12 @@ steps:
   displayName: 'Building $(buildConfiguration)...'
   inputs:
     command: 'build'
-    projects: '**/Razor.SweetAlert2.Guide.Server.csproj'
-    arguments: '-c $(buildConfiguration)'
+    projects: '**/$(projectName).csproj'
+    arguments: '-c $(buildConfiguration) -v n'
 
 - task: CopyFiles@2
   inputs:
-    Contents: '$(Agent.BuildDirectory)/**'
+    Contents: '$(Agent.BuildDirectory)/$(projectName)/bin/$(buildConfiguration)/netcoreapp3.0/**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
