@@ -28,12 +28,16 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    Contents: '$(Agent.BuildDirectory)/$(projectName)/bin/$(buildConfiguration)/netcoreapp3.0/**'
+    SourceFolder: '$(Build.SourcesDirectory)/$(projectName)/bin/$(buildConfiguration)/netcoreapp3.0/'
+    Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    CleanTargetFolder: true
 
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
+    ArtifactName: 'BuildOutput'
     publishLocation: 'Container'
+
+
 
