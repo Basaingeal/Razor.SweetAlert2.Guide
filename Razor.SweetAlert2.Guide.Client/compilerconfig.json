@@ -1,0 +1,18 @@
+﻿[
+  {
+    "outputFile": "wwwroot/styles/styles.css",
+    "inputFile": "wwwroot/styles/styles.scss"
+  },
+  {
+    "outputFile": "wwwroot/styles/native-js.css",
+    "inputFile": "wwwroot/styles/native-js.scss"
+  },
+  {
+    "outputFile": "wwwroot/styles/carbon-ads.css",
+    "inputFile": "wwwroot/styles/carbon-ads.scss"
+  },
+  {
+    "outputFile": "wwwroot/styles/buysellads.css",
+    "inputFile": "wwwroot/styles/buysellads.scss"
+  }
+]
