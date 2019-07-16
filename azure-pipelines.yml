@@ -43,12 +43,12 @@ steps:
     ArtifactName: 'BuildOutput'
     publishLocation: 'Container'
 
-#- task: Docker@2
-#  inputs:
-#    containerRegistry: 'basaingeal-docker-hub'
-#    repository: 'razor-sweetalert2-guide'
-#    command: 'buildAndPush'
-#    Dockerfile: '**/Dockerfile'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'basaingeal-docker-hub'
+    repository: 'razor-sweetalert2-guide'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
 
 
 
