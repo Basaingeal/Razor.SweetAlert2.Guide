@@ -49,7 +49,7 @@ steps:
     repository: 'razor-sweetalert2-guide'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-    buildContext: './Razor.SweetAlert2.Guide.Server'
+
 
 
 
