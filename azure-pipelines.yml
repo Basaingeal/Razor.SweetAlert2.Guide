@@ -33,14 +33,7 @@ steps:
     command: 'publish'
     publishWebProjects: false
     projects: '**/$(projectName).csproj'
-    arguments: '-c $(buildConfiguration)'
-
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(Build.SourcesDirectory)/$(projectName)/bin/$(buildConfiguration)/netcoreapp3.0/publish/'
-    Contents: '**'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
-    CleanTargetFolder: true
+    arguments: '-c $(buildConfiguration) -o $(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
   inputs:
