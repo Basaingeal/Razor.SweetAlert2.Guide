@@ -31,8 +31,7 @@ steps:
   displayName: 'Publishing $(buildConfiguration)...'
   inputs:
     command: 'publish'
-    projects: '**/$(projectName).csproj'
-    arguments: '-c $(buildConfiguration)'
+    arguments: '$(projectName)/$(projectName).csproj -c $(buildConfiguration)'
 
 
 - task: CopyFiles@2
