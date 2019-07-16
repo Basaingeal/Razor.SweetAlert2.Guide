@@ -2,6 +2,5 @@
 #For more information, please see https://aka.ms/containercompat
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.0
-WORKDIR /app
-COPY ./bin/Release/netcoreapp3.0/publish/ .
-ENTRYPOINT ["dotnet", "Razor.SweetAlert2.Guide.Server.dll"]
+COPY Razor.SweetAlert2.Guide.Server/bin/Release/netcoreapp3.0/publish/ /app/
+ENTRYPOINT ["dotnet", "app/Razor.SweetAlert2.Guide.Server.dll"]
